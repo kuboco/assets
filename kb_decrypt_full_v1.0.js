@@ -173,7 +173,7 @@
             if (typeof(data) === "object") {
                 if(data.note){$('.decryptbox').append('<span class="alert alert-success pt-0 pb-0 mb-1">' + data.note + '</span>')};
                 if(!data.countdown){
-                  report[0].innerHTML = '<div class="text-center"><a class="btn btn-primary mb-2 pt-0 pb-0" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
+                  report[0].innerHTML = '<div class="text-center"><a class="btn2 btn-primary mb-2 pt-0 pb-0" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
                   $this.find('button, input').attr('disabled', 'disabled');
                   $this.slideUp('slow');
                 } else {
@@ -191,9 +191,9 @@
                       timeleft -= 1;
                       if(timeleft <= 0){
                         clearInterval(downloadTimer);
-                        report[0].innerHTML = '<button class="btn btn-primary mb-2 pt-1 pb-1">Getlink</button>';
+                        report[0].innerHTML = '<button class="btn2 btn-primary mb-2 pt-1 pb-1">Getlink</button>';
                         if(!config.click2x){
-                          report[0].innerHTML = '<div class="text-center"><a class="btn btn-primary mb-2 pt-0 pb-0" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
+                          report[0].innerHTML = '<div class="text-center"><a class="btn2 btn-primary mb-2 pt-0 pb-0" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
                         } else {
                           function gotolinkcountdown() {
                             var o = 5;
@@ -204,7 +204,7 @@
                             }, 1e3)
                             }
                           var request = !1;
-                          $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 1000),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
+                          $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -100 }, 2000),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
                         }
                       }
                     }
@@ -248,7 +248,7 @@
                 timeleft -= 1;
                 if(timeleft <= 0){
                   clearInterval(downloadTimer);
-                  $(config.output)[0].innerHTML = '<button class="btn btn-primary mb-2 pt-1 pb-1">Getlink</button>';
+                  $(config.output)[0].innerHTML = '<button class="btn2 btn-primary mb-2 pt-1 pb-1">Getlink</button>';
                   if(!config.click2x){
                     $(config.output)[0].innerHTML = '<div class="text-center"><a class="text-center" href="javascript:void(0)" onclick="location.href=&#39;'+(data.url.toLowerCase().startsWith('www.') ? '//' : '')+''+data.url+'&#39;">'+config.lang.gourltext+'</a></div>';
                   } else {
@@ -261,7 +261,7 @@
                       }, 1e3)
                     }
                     var request = !1;
-                    $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -20 }, 1000),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
+                    $("#output button").click(function() { 0 == request && (gotolinkcountdown(), request = !0),$("html, body").animate({ scrollTop: $('#gotolink').offset().top -100 }, 2000),$("#output button").prop( "disabled", true );$(config.gotolink).prop( "disabled", true ).css("display","block").off('click');});
                   }
                 }
               }                         
@@ -275,7 +275,7 @@
               });
             }
           } else {
-            $(config.output)[0].innerHTML = '<form class="form-group" id="locked"><div class="input-group"><div class="input-group-prepend"><span class="input-group-text"><svg fill="none" height="24" id="i-lock" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23"/>    <circle cx="16" cy="24" r="1"/></svg></span></div><input class="form-control" name="pass" type="password" id="passin" onclick="sUp(\'#report\')" onkeypress="sUp(\'#report\')" aria-label="Password" /><div class="input-group-append"><button class="btn btn-primary" type="submit">Unlock</button></div></div></form><section class="trans" style="overflow: hidden;height: 0"><div id="report"></div></section>';
+            $(config.output)[0].innerHTML = '<form class="form-group" id="locked"><div class="input-group"><div class="input-group-prepend"><span class="input-group-text"><svg fill="none" height="24" id="i-lock" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 32 32" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23"/>    <circle cx="16" cy="24" r="1"/></svg></span></div><input class="form-control" name="pass" type="password" id="passin" onclick="sUp(\'#report\')" onkeypress="sUp(\'#report\')" aria-label="Password" /><div class="input-group-append"><button class="btn2 btn-primary" type="submit">Unlock</button></div></div></form><section class="trans" style="overflow: hidden;height: 0"><div id="report"></div></section>';
           }
         } else {
           if($(config.output).length){
