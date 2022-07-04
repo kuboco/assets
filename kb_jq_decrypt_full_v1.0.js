@@ -148,8 +148,6 @@
     }
       /* - - - - - - - - - - - - -  */
       if (typeof module != 'undefined' && module.exports) module.exports = Tea; // ≡ export default Tea;
-      $("<ins class='adsbygoogle' style='display:block;' data-ad-format='auto' data-ad-client='ca-pub-9828917563735047' data-ad-slot='8821334006' data-full-width-responsive='true'></ins>").insertAfter(".decryptbox");
-      $("<ins class='adsbygoogle' style='display:block;;width:300px;height:600px;margin: auto;' data-ad-format='auto' data-ad-layout='in-article' data-ad-client='ca-pub-9828917563735047' data-ad-slot='7486811850'></ins>").insertBefore("#gotolink");
       "use strict";
       if (!String.prototype.startsWith) {
           Object.defineProperty(String.prototype, 'startsWith', {
