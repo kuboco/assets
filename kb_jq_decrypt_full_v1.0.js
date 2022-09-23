@@ -13,7 +13,7 @@
           fixednavbar: false,
           countdown: true,
           click2x: true,  
-          timedown: 10,
+          timedown: 3,
           lang: {
             urlempty: "URL can not empty",
             convertsuccess: "Convert URL success, copy url on box below",
